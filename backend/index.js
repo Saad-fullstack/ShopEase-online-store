@@ -10,7 +10,7 @@ import cors from "cors"
 
 dotenv.config()
 
-Connection()
+await Connection()
 const port = process.env.PORT
 
 app.use(cookieParser())
