@@ -50,7 +50,7 @@ const UserProfile = () => {
 
     const userProfile = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v1/user/user-profile", {
+            const { data } = await axios.get("/api/v1/user/user-profile", {
                 withCredentials: true
             })
             // console.log(data)
@@ -69,7 +69,7 @@ const UserProfile = () => {
     const handleSaveProfile = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.patch("http://localhost:8000/api/v1/user/update-user",
+            const { data } = await axios.patch("/api/v1/user/update-user",
                 { name, email },
                 { withCredentials: true }
             )

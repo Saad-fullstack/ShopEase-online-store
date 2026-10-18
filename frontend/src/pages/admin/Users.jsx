@@ -8,7 +8,7 @@ const Users = () => {
 
     const getAllUsers = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v1/user/get-all-users", {
+            const { data } = await axios.get("/api/v1/user/get-all-users", {
                 withCredentials: true
             })
             // console.log(data)
@@ -25,7 +25,7 @@ const Users = () => {
 
     const handleDelete = async (id) => {
         try {
-            const { data } = await axios.delete(`http://localhost:8000/api/v1/user/delete-user/${id}`, {
+            const { data } = await axios.delete(`/api/v1/user/delete-user/${id}`, {
                 withCredentials: true
             })
 

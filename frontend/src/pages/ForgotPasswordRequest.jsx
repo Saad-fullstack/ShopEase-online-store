@@ -9,7 +9,7 @@ const ForgotPasswordRequest = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            await axios.post("http://localhost:8000/api/v1/user/reset-password-request", { email }, {
+            await axios.post("/api/v1/user/reset-password-request", { email }, {
                 withCredentials: true
             })
 

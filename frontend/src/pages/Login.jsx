@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault()
 
         try {
-            const { data } = await axios.post("http://localhost:8000/api/v1/user/login-user", form, {
+            const { data } = await axios.post("/api/v1/user/login-user", form, {
                 withCredentials: true
             })
 

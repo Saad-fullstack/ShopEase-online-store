@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://shop-ease-online-store.vercel.app/api/:path*"
+    }
+  ]
+}

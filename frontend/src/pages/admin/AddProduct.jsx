@@ -19,7 +19,7 @@ const AddProduct = () => {
         e.preventDefault();
 
         try {
-            await axios.post("http://localhost:8000/api/v1/product/create-product", form, {
+            await axios.post("/api/v1/product/create-product", form, {
                 withCredentials: true
             })
             toast.success("Product created successfully")

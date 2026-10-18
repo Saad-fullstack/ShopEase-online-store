@@ -17,7 +17,7 @@ const ResetPassword = () => {
         e.preventDefault()
 
         try {
-            await axios.post(`http://localhost:8000/api/v1/user/reset-password/${token}`, form, {
+            await axios.post(`/api/v1/user/reset-password/${token}`, form, {
                 withCredentials: true
             })
             toast.success("Password reset successfully")

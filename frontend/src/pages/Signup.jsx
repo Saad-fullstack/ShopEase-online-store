@@ -21,7 +21,7 @@ const Signup = () => {
         e.preventDefault()
 
         try {
-            const { data } = await axios.post("http://localhost:8000/api/v1/user/register-user", form, {
+            const { data } = await axios.post("/api/v1/user/register-user", form, {
                 withCredentials: true
             })
             localStorage.setItem("user", JSON.stringify(data.user))

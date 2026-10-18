@@ -8,7 +8,7 @@ const AdminDashboard = () => {
 
     const totalProducts = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v1/product/get-all-products")
+            const { data } = await axios.get("/api/v1/product/get-all-products")
             // console.log(data.products)
             setProducts(data.products)
         } catch (error) {
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
     const totalUsers = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v1/user/get-all-users", {
+            const { data } = await axios.get("/api/v1/user/get-all-users", {
                 withCredentials: true
             })
             // console.log(data)

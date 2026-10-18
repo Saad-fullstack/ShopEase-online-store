@@ -19,7 +19,7 @@ const AdminProducts = () => {
 
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v1/product/get-all-products")
+            const { data } = await axios.get("/api/v1/product/get-all-products")
             // console.log(data.products)
             setProducts(data.products)
         } catch (error) {
@@ -35,7 +35,7 @@ const AdminProducts = () => {
     // Delete Product
     const handleDelete = async (id) => {
         try {
-            const { data } = await axios.delete(`http://localhost:8000/api/v1/product/delete-product/${id}`, {
+            const { data } = await axios.delete(`/api/v1/product/delete-product/${id}`, {
                 withCredentials: true
             })
 
@@ -50,7 +50,7 @@ const AdminProducts = () => {
     // Edit product
     const handleEdit = async (id) => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/v1/product/product-detail/${id}`)
+            const { data } = await axios.get(`/api/v1/product/product-detail/${id}`)
             // console.log(data)
             setEditingProduct(data.product)
             setEditForm({
@@ -73,7 +73,7 @@ const AdminProducts = () => {
     const handleUpdate = async (e) => {
         e.preventDefault()
         try {
-            await axios.patch(`http://localhost:8000/api/v1/product/update-product/${editingProduct._id}`, editForm, { withCredentials: true })
+            await axios.patch(`/api/v1/product/update-product/${editingProduct._id}`, editForm, { withCredentials: true })
 
             toast.success("Product update successfully")
             console.log(products.data)
